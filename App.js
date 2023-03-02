@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import data from './data';
+import data from './components/images';
 
 export default () => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.container}>
-        {data.data.map((image, index) => {
+        {data.images.map((image, index) => {
           return (
             <View key={index} style={styles.imageContainer}>
               <Image source={{ uri: image.url }} style={styles.image} />
@@ -14,14 +14,6 @@ export default () => {
           )
         })}
       </View>
-
-      {/* {data.data.map((name, index) => {
-        return <Text style={styles.title}>{name.title}</Text>;
-      })}
-
-      {data.data.map((content, index) => {
-        return <Text style={styles.descrip}>{content.descrip}</Text>;
-      })} */}
 
     </View>
   );
